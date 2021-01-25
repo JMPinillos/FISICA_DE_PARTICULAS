@@ -5,35 +5,7 @@
 
 <title>LABORATORIO FISICA DE PARTICULAS</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
+
 
 
 <style type="text/css">
@@ -14283,7 +14255,7 @@ a.anchor-link {
     init_mathjax();
     </script>
     <!-- End of mathjax configuration --></head>
-<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light" onload="includeHTML()">
+<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14347,7 +14319,17 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#191;qu&#233;-hace-el-comando-anterior?-&#191;De-qu&#233;-subcomandos-se-compone-y-qu&#233;-papel-juegan-(ifconfig,-grep,-awk-y-sed)?">&#191;qu&#233; hace el comando anterior? &#191;De qu&#233; subcomandos se compone y qu&#233; papel juegan (<code>ifconfig</code>, <code>grep</code>, <code>awk</code> y <code>sed</code>)?<a class="anchor-link" href="#&#191;qu&#233;-hace-el-comando-anterior?-&#191;De-qu&#233;-subcomandos-se-compone-y-qu&#233;-papel-juegan-(ifconfig,-grep,-awk-y-sed)?">&#182;</a></h3>
+<h3 id="&#191;qu&#233;-hace-el-comando-anterior?-&#191;De-qu&#233;-subcomandos-se-compone-y-qu&#233;-papel-juegan-(ifconfig,-grep,-awk-y-sed)?">&#191;qu&#233; hace el comando anterior? &#191;De qu&#233; subcomandos se compone y qu&#233; papel juegan (<code>ifconfig</code>, <code>grep</code>, <code>awk</code> y <code>sed</code>)?<a class="anchor-link" href="#&#191;qu&#233;-hace-el-comando-anterior?-&#191;De-qu&#233;-subcomandos-se-compone-y-qu&#233;-papel-juegan-(ifconfig,-grep,-awk-y-sed)?">&#182;</a></h3><ul>
+<li><p><strong><code>ifconfig</code></strong>: Imprime por pantalla información sobre las tarjetas de red instaladar en el equipo, en función de la distro seleccionada puede ser ethx, nax, etc...</p>
+</li>
+<li><p><strong><code>grep</code></strong>: Comando que revisa línea por línea impreso mostrando solo las filas que contienen los caracteres o dígitos pasados por argumentos.</p>
+</li>
+<li><p><strong><code>awk</code></strong>: Nos permite codificar un script que realiza desde transformaciones sobre los datos hasta seleccionar los que nos interesan. Es muy potente para procesar ficheros en formato de texto plano como CSV, TSV , etc...</p>
+</li>
+<li><p><strong><code>sed</code></strong>: Comando para reemplazar un determinado texto, se pueden emplear expresiones regulares para seleccionarlo.</p>
+</li>
+</ul>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14401,6 +14383,11 @@ a.anchor-link {
 <td style="text-align:left">x3dom</td>
 <td style="text-align:left">X3D</td>
 <td style="text-align:left">Formato de intercambio de datos 3D optimizado para la web</td>
+</tr>
+<tr>
+<td style="text-align:left">VRML 97 (ISO/IEC DIS 14772-1)</td>
+<td style="text-align:left">Consorcio Web3D</td>
+<td style="text-align:left">Para modelar objetos 3d que son interpretados en un navegador web, está orientado a la realidad virtual</td>
 </tr>
 </tbody>
 </table>
@@ -15046,7 +15033,8 @@ Avalon: sistema dinámico de gestión y manipulación de escenas.</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Ionizaci&#243;n">Ionizaci&#243;n<a class="anchor-link" href="#Ionizaci&#243;n">&#182;</a></h2><p>Si en los choques de una partícula cargada con los electrones atómicos, la energía transferida es superior a la energía de enlace del electrón que recibe el impacto, este abandona el átomo y en consecuencia se crea un ion positivo. El electrón expulsado puede a continuación zigzaguear hasta ser capturado por un átomo del entorno (la traza deja de verse porque, como hemos comentado, el electrón se para).</p>
-<div include-html="https://github.com/JMPinillos/FISICA_DE_PARTICULAS/blob/main/simulation_ionizacio%CC%81n_1.html"></div> 
+<p><img src="https://raw.githubusercontent.com/JMPinillos/FISICA_DE_PARTICULAS/main/Experimento_ionizacion_1.png" alt="Experimento Ionizacion"></p>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
