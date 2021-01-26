@@ -14326,7 +14326,7 @@ a.anchor-link {
 </li>
 <li><p><strong><code>awk</code></strong>: Nos permite codificar un script que realiza desde transformaciones sobre los datos hasta seleccionar los que nos interesan. Es muy potente para procesar ficheros en formato de texto plano como CSV, TSV , etc...</p>
 </li>
-<li><p><strong><code>sed</code></strong>: Comando para reemplazar un determinado texto, se pueden emplear expresiones regulares para seleccionarlo.</p>
+<li><p><strong><code>sed</code></strong>: Comando para reemplazar un determinado texto o caracteres, se pueden emplear expresiones regulares para seleccionarlo. En este caso reemplazamos los puntos por comas.</p>
 </li>
 </ul>
 
@@ -14442,12 +14442,20 @@ Avalon: sistema dinámico de gestión y manipulación de escenas.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#191;qu&#233;-es-Docker?">&#191;qu&#233; es Docker?<a class="anchor-link" href="#&#191;qu&#233;-es-Docker?">&#182;</a></h3><p>Docker es un software de creación y gestión de contenedores basado en linux. Es multiplataforma y de codigo abierto.</p>
+<h3 id="&#191;qu&#233;-es-Docker?">&#191;qu&#233; es Docker?<a class="anchor-link" href="#&#191;qu&#233;-es-Docker?">&#182;</a></h3><p>Docker es un software de codigo abierto y multiplataforma de creación y gestión de contenedores basado en linux.</p>
 <h3 id="&#191;Qu&#233;-son-los-contenedores-virtuales?">&#191;Qu&#233; son los contenedores virtuales?<a class="anchor-link" href="#&#191;Qu&#233;-son-los-contenedores-virtuales?">&#182;</a></h3><p>Los contenedores virtuales son semejantes a pequeñas maquinas virtuales pero sin sistema operativo lo que las hace mas ligeras, están pensados para ejecutar un único proceso y contienen en su interior todo lo necesario para la realización de ese proceso.</p>
 <h3 id="&#191;Qu&#233;-alternativas-a-Docker-existen-(OpenVZ,-LXC,-Vagrant,-rkt,-Singularity,-etc.)?">&#191;Qu&#233; alternativas a Docker existen (<a href="https://openvz.org/">OpenVZ</a>, <a href="https://linuxcontainers.org/">LXC</a>, <a href="https://www.vagrantup.com/">Vagrant</a>, <a href="https://coreos.com/rkt/">rkt</a>, <a href="https://sylabs.io/">Singularity</a>, etc.)?<a class="anchor-link" href="#&#191;Qu&#233;-alternativas-a-Docker-existen-(OpenVZ,-LXC,-Vagrant,-rkt,-Singularity,-etc.)?">&#182;</a></h3><ul>
-<li><p>OpenVz: Es opensource y le da soporte la empresa SWsoft, basándose también en contenedores linux ofrece un enfoque mas clásico de virtualización con sistemas operativos dentro de los contenedores.</p>
+<li><p><a href="https://openvz.org/">OpenVz</a>: Es opensource y le da soporte la empresa SWsoft, basándose también en contenedores linux ofrece un enfoque mas clásico de virtualización con sistemas operativos dentro de los contenedores.</p>
 </li>
-<li><p>LXC: Es solo para linux y fue usada en las primeras versiones de Docker. Proporciona funcionalidades para la virtualización a escala de sistema operativo sin necesidad de crear máquinas virtuales.</p>
+<li><p><a href="https://linuxcontainers.org/">LXC</a>: Es solo para linux y fue usada en las primeras versiones de Docker. Proporciona funcionalidades para la virtualización a escala de sistema operativo sin necesidad de crear máquinas virtuales.</p>
+</li>
+<li><p><a href="https://coreos.com/rkt/">rkt</a>: es un motor de contenedores de aplicaciones desarrollado para entornos nativos de la nube de producción moderna. Cuenta con un enfoque nativo de pod, un entorno de ejecución conectable y un área de superficie bien definida que lo hace ideal para la integración con otros sistemas. Los pods de rkt sigue el mismo concepto que el sistema de orquestación de Kubernetes.</p>
+</li>
+<li><p><a href="https://kubernetes.io/es/docs/concepts/overview/what-is-kubernetes/">Kubernetes</a>: Es una plataforma portable y extensible de código abierto para administrar cargas de trabajo y servicios. Kubernetes facilita la automatización y la configuración declarativa. Tiene un ecosistema grande y en rápido crecimiento. El soporte, las herramientas y los servicios para Kubernetes están ampliamente disponibles. Kubernetes ofrece un entorno de administración centrado en contenedores. Kubernetes orquesta la infraestructura de cómputo, redes y almacenamiento para que las cargas de trabajo de los usuarios no tengan que hacerlo. Esto ofrece la simplicidad de las Plataformas como Servicio (PaaS) con la flexibilidad de la Infraestructura como Servicio (IaaS) y permite la portabilidad entre proveedores de infraestructura.</p>
+</li>
+<li><p><a href="https://www.vagrantup.com/">Vagrant</a>: Es una herramienta para crear y administrar entornos de máquinas virtuales en un solo flujo de trabajo. Con un flujo de trabajo fácil de usar y un enfoque en la automatización. Vagrant reduce el tiempo de configuración del entorno de desarrollo, aumenta la paridad de producción y hace que los "trabajos en la propia máquina" sean una reliquia del pasado.</p>
+</li>
+<li><p><a href="https://sylabs.io/">Singularity</a>: Proporciona una única vía de acceso universal desde los puestos trabajo de los desarrolladores hasta los recursos locales, la nube y todo siempre hasta el máximo de sus posibilidades. Los usuarios de Singularity pueden construir aplicaciones en los escritorios y lanzar cientos o miles instancias.Kubernetes:es una plataforma portable y extensible de código abierto para administrarcargas de trabajo y servicios.</p>
 </li>
 </ul>
 <h3 id="Resume-brevemente-la-historia-de-Docker.">Resume brevemente la historia de Docker.<a class="anchor-link" href="#Resume-brevemente-la-historia-de-Docker.">&#182;</a></h3><p>En el año 2000 para conseguir la separación entre servicios compartidos se crea FreeBSD Jails que separa el sistema en varios sistemas casi independientes y configurables por separado, este sería el inicio que daría lugar a los futuros contenedores.</p>
@@ -14456,7 +14464,8 @@ Avalon: sistema dinámico de gestión y manipulación de escenas.</p>
 <p>En 2013 la empresa dotcould crea un motor de contenedores para linux utilizando LXC para su gestión. El proyecto tubo gran acogida y se creo un equipo dedicado y se le dio el nombre de DOCKER al proyecto que finalmente lanzo su primera version en 2014.</p>
 <p>En posteriores versiones Docker abandona la tecnología LXC y la sustituye por libcontainer.</p>
 <h3 id="&#191;Por-qu&#233;-Docker-se-ha-convertido-en-un-software-tan-popular?">&#191;Por qu&#233; Docker se ha convertido en un software tan popular?<a class="anchor-link" href="#&#191;Por-qu&#233;-Docker-se-ha-convertido-en-un-software-tan-popular?">&#182;</a></h3><p>Docker es tan popular gracias a su alto grado de portabilidad, el cual permite distribuir los contenedores con entornos ya creados y configurados donde se puedan reproducir los procesos y los resultados, esto es especialmente útil entre la comunidad científica y los desarrollares de software.</p>
-<p>Otro punto a favor de docker es que encaja muy bien con tecnologías basadas en la nube.</p>
+<p>Otro punto a favor de docker es que encaja muy bien con tecnologías basadas en la nube y permite mas instancias de aplicaciones de servidor que con máquinas virtuales Xeno KVM en el mismo hardware.</p>
+<p>Tambien facilita a los desarrolladores empaquetar, enviar y ejecutar de manera sencilla cualquier aplicación, pudiendo aislar el código en un sólo contenedor y haciendo que modificar o actualizar la aplicación sea más sencillo.</p>
 
 </div>
 </div>
@@ -14895,8 +14904,12 @@ Avalon: sistema dinámico de gestión y manipulación de escenas.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#191;C&#243;mo-es-posible-que-veamos-figuras-3D-en-una-p&#225;gina-web?">&#191;C&#243;mo es posible que veamos figuras 3D en una p&#225;gina web?<a class="anchor-link" href="#&#191;C&#243;mo-es-posible-que-veamos-figuras-3D-en-una-p&#225;gina-web?">&#182;</a></h3><p>Existen diferentes maneras de mostrar contenido 3D en una pagina web. Por ejemplo, podemos mostrarlo utilizando JavaScript o mediante un Canvas</p>
-<h3 id="&#191;Qu&#233;-est&#225;ndares,-alternativas,-consorcios-e-instituciones-est&#225;n-implicados?">&#191;Qu&#233; est&#225;ndares, alternativas, consorcios e instituciones est&#225;n implicados?<a class="anchor-link" href="#&#191;Qu&#233;-est&#225;ndares,-alternativas,-consorcios-e-instituciones-est&#225;n-implicados?">&#182;</a></h3><h3 id="&#191;Qu&#233;-alternativa-estamos-usando-en-este-ejercicio-y-qu&#233;-gran-centro-de-investigaci&#243;n-en-matem&#225;ticas-estuvo-implicado?">&#191;Qu&#233; alternativa estamos usando en este ejercicio y qu&#233; gran centro de investigaci&#243;n en matem&#225;ticas estuvo implicado?<a class="anchor-link" href="#&#191;Qu&#233;-alternativa-estamos-usando-en-este-ejercicio-y-qu&#233;-gran-centro-de-investigaci&#243;n-en-matem&#225;ticas-estuvo-implicado?">&#182;</a></h3>
+<h3 id="&#191;C&#243;mo-es-posible-que-veamos-figuras-3D-en-una-p&#225;gina-web?">&#191;C&#243;mo es posible que veamos figuras 3D en una p&#225;gina web?<a class="anchor-link" href="#&#191;C&#243;mo-es-posible-que-veamos-figuras-3D-en-una-p&#225;gina-web?">&#182;</a></h3><p>Existen diferentes maneras de mostrar contenido 3D en una pagina web. Por ejemplo, podemos mostrarlo utilizando JavaScript o mediante un Canvas. En nuestro caso las imagenes se muestran gracias al elemento HTML canvas que permite dibujar gráficos.</p>
+<h3 id="&#191;Qu&#233;-est&#225;ndares,-alternativas,-consorcios-e-instituciones-est&#225;n-implicados?">&#191;Qu&#233; est&#225;ndares, alternativas, consorcios e instituciones est&#225;n implicados?<a class="anchor-link" href="#&#191;Qu&#233;-est&#225;ndares,-alternativas,-consorcios-e-instituciones-est&#225;n-implicados?">&#182;</a></h3><p>El estándar a seguir es HTML5.</p>
+<p>Como alternativas podrían usarse Flash, Java, ActiveX, SVG y JavaScript</p>
+<h3 id="&#191;Qu&#233;-alternativa-estamos-usando-en-este-ejercicio-y-qu&#233;-gran-centro-de-investigaci&#243;n-en-matem&#225;ticas-estuvo-implicado?">&#191;Qu&#233; alternativa estamos usando en este ejercicio y qu&#233; gran centro de investigaci&#243;n en matem&#225;ticas estuvo implicado?<a class="anchor-link" href="#&#191;Qu&#233;-alternativa-estamos-usando-en-este-ejercicio-y-qu&#233;-gran-centro-de-investigaci&#243;n-en-matem&#225;ticas-estuvo-implicado?">&#182;</a></h3><p>En nuestro ejercicio creamos un archivo llamado <strong><code>simulation.wrl</code></strong> y se envia un API de <strong>instant reality</strong>, del que ya hablamos anteriormente, que nos es mas que un conversor que interpreta unos parametros y nos lo convierte a <strong><code>HTML5</code></strong>.</p>
+<p>El API se basa en <strong>X3D</strong>, estándar de código abierto para publicar, ver, imprimir y archivar modelos 3Dinteractivos en la Web. Los estándares X3D y HANIM son desarrollados y mantenidospor Web3D Consortium.</p>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14936,7 +14949,8 @@ Avalon: sistema dinámico de gestión y manipulación de escenas.</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="https://raw.githubusercontent.com/JMPinillos/FISICA_DE_PARTICULAS/main/IMAGENES/Experimento_Fotoelectrico_1.png" alt="Experimento fototoeléctrico 1"></p>
-<p>En esta primera imagen podemos observar como tras impactar con el fantoma algunos fotones atraviesan el fantoma, pero si hacemos zoom a la imagen vemos como otros fotones consiguen arrancar un electrón de algún atomo del material, aunque no con la suficiente energía como para que se desprenda totalmente de este y es reabsorbido.</p>
+<p>En esta primera imagen podemos observar como tras impactar con el fantoma algunos fotones atraviesan el fantoma, pero si hacemos zoom a la imagen vemos como otros fotones consiguen arrancar un electrón de algún atomo del material, aunque no con la suficiente energía como para que se desprenda totalmente de este y es reabsorbido por el material.</p>
+<p>Tambien se aprecia el efecto Compton que veremos mas adelante.</p>
 
 </div>
 </div>
@@ -14998,7 +15012,8 @@ Avalon: sistema dinámico de gestión y manipulación de escenas.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#191;cu&#225;nto-tiempo-puede-estar-serpenteando-un-fot&#243;n-que-nace-en-el-centro-del-Sol-hasta-llegar-a-la-retina-de-cualquiera-de-tus-ojos?">&#191;cu&#225;nto tiempo puede estar serpenteando un fot&#243;n que nace en el centro del Sol hasta llegar a la retina de cualquiera de tus ojos?<a class="anchor-link" href="#&#191;cu&#225;nto-tiempo-puede-estar-serpenteando-un-fot&#243;n-que-nace-en-el-centro-del-Sol-hasta-llegar-a-la-retina-de-cualquiera-de-tus-ojos?">&#182;</a></h3>
+<h3 id="&#191;cu&#225;nto-tiempo-puede-estar-serpenteando-un-fot&#243;n-que-nace-en-el-centro-del-Sol-hasta-llegar-a-la-retina-de-cualquiera-de-tus-ojos?">&#191;cu&#225;nto tiempo puede estar serpenteando un fot&#243;n que nace en el centro del Sol hasta llegar a la retina de cualquiera de tus ojos?<a class="anchor-link" href="#&#191;cu&#225;nto-tiempo-puede-estar-serpenteando-un-fot&#243;n-que-nace-en-el-centro-del-Sol-hasta-llegar-a-la-retina-de-cualquiera-de-tus-ojos?">&#182;</a></h3><p>La luz (fotones) tarda unos ocho minutos en recorrer los 150 millones de kilómetros quenos separan con el sol.</p>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15139,7 +15154,9 @@ Avalon: sistema dinámico de gestión y manipulación de escenas.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#191;Qu&#233;-relaci&#243;n-tiene-la-modalidad-radiol&#243;gica-PET-con-la-aniquilaci&#243;n-de-pares-electr&#243;n-positr&#243;n?">&#191;Qu&#233; relaci&#243;n tiene la modalidad radiol&#243;gica PET con la aniquilaci&#243;n de pares electr&#243;n-positr&#243;n?<a class="anchor-link" href="#&#191;Qu&#233;-relaci&#243;n-tiene-la-modalidad-radiol&#243;gica-PET-con-la-aniquilaci&#243;n-de-pares-electr&#243;n-positr&#243;n?">&#182;</a></h3><h3 id="&#191;C&#243;mo-se-trasladan-positrones-hasta-el-interior-de-las-c&#233;lulas-cancer&#237;genas?">&#191;C&#243;mo se trasladan positrones hasta el interior de las c&#233;lulas cancer&#237;genas?<a class="anchor-link" href="#&#191;C&#243;mo-se-trasladan-positrones-hasta-el-interior-de-las-c&#233;lulas-cancer&#237;genas?">&#182;</a></h3>
+<h3 id="&#191;Qu&#233;-relaci&#243;n-tiene-la-modalidad-radiol&#243;gica-PET-con-la-aniquilaci&#243;n-de-pares-electr&#243;n-positr&#243;n?,-&#191;C&#243;mo-se-trasladan-positrones-hasta-el-interior-de-las-c&#233;lulas-cancer&#237;genas?">&#191;Qu&#233; relaci&#243;n tiene la modalidad radiol&#243;gica PET con la aniquilaci&#243;n de pares electr&#243;n-positr&#243;n?, &#191;C&#243;mo se trasladan positrones hasta el interior de las c&#233;lulas cancer&#237;genas?<a class="anchor-link" href="#&#191;Qu&#233;-relaci&#243;n-tiene-la-modalidad-radiol&#243;gica-PET-con-la-aniquilaci&#243;n-de-pares-electr&#243;n-positr&#243;n?,-&#191;C&#243;mo-se-trasladan-positrones-hasta-el-interior-de-las-c&#233;lulas-cancer&#237;genas?">&#182;</a></h3><p><strong>PET (Tomografía por Emisión de Positrones)</strong> es una técnica de proyección de imágenes que usa moléculas radiactivas para crear imágenes dinámicas de los tejidos y órganosinternos. Los escaneos PET son muy útiles ya que las enfermedades como el cáncer son procesos biológicos y los escaneos PET producen imágenes que revelan la actividad de los tejidos vivos. Éste es un contraste a las técnicas que revelan la estructura pero no actividad,tales como CT o Rayos-X.</p>
+<p>Los escaneos PET usan pequeñas moléculas diseñadas para ser muy similares a los compuestos usualmente encontrados en el cuerpo (radiotrazadores) que son inyectados a la sangre. Estos trazadores etiquetados compuestos son especialmente marcados y se usan en procesos normales del cuerpo, pero emiten positrones cuando se rompen (Al igual que aniquilación electrón-positrón emite fotones). Los escáneres PET contienen cámaras especiales que detectan estos positrones y crean imágenes con la información. La imagen distingue áreas que tienen poca concentración de radiotrazadores de áreas con altas concentraciones de radiotrazadores,presentando las diferencias en la imagen con cambios de color.</p>
+
 </div>
 </div>
 </body>
